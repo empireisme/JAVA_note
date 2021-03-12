@@ -1,6 +1,6 @@
 # Thread 執行緒
 
-## 一樣先看範例
+## 直接建立物件法
 
 ```java
 package finalDemo;
@@ -21,5 +21,5 @@ public class hellowworld {
 }
 ```
 
-
+這裡的run不能換名字，start\(\)也是
 
