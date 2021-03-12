@@ -28,5 +28,45 @@ public class hellowworld {
 
 ## 繼承類別後建立物件
 
+```java
+public class noarm extends Thread {
+	public void name() {
+		System.out.println("V");
+	}
+	public void run() {
+		super.run();
+		for(int i=0;i<10000;i++) {
+			name();
+		}
+	}
+
+}
+```
+
+```java
+public class hellowworld {
+	public static void main(String[] args) {
+		Thread thread=new Thread() {
+			@Override //在這裡按alt+/就可以選run
+			public void run() {
+				for(int i=0;i<10000;i++) {
+					System.out.println("XDD");
+				}
+			}
+			
+		};//記得加上分號，建立物件加上分號
+		
+		Thread th2=new noarm();
+		
+		thread.start();
+		th2.start();
+		for(int i=0;i<1000;i++) {
+			System.out.println("main");
+		}
+	}
+
+}
+```
+
 
 
