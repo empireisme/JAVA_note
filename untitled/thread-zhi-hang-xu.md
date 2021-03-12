@@ -26,9 +26,7 @@ public class hellowworld {
 
 這裡的run不能換名字，start\(\)也是
 
-## d dadf $1123$
+## 繼承類別後建立物件
 
 
-
-2
 
