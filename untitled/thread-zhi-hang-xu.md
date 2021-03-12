@@ -68,5 +68,45 @@ public class hellowworld {
 }
 ```
 
+```java
+public class hihi {
+	public static void main(String[] args) {
+		Thread th1=new Thread() {
+			public void run() {
+				Thread	t=Thread.currentThread();
+				try {
+					Thread.sleep(10000);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+				System.out.println("Thread1="+t.getName());
+			};
+		};
+//		Thread th2=new Thread() {
+//			public void run() {
+//				Thread	t=Thread.currentThread();
+//				System.out.println("Thread2="+t.getName());
+//			};
+//		};
+		
+		
+		th1.start();
+		System.out.println(th1.isAlive());
+		try {
+			th1.join();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+//		th2.start();
+		
+		Thread t=Thread.currentThread();
+		System.out.println("Main="+t.getName());
+		System.out.println(th1.isAlive());//此時他才死了
+	}
 
+}
+
+```
+
+![](../.gitbook/assets/image%20%289%29.png)
 
