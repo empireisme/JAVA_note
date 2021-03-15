@@ -20,7 +20,36 @@ INSERT [GUIDdemo] (COL1) SELECT '第一列'
 SELECT * FROM [GUIDdemo];
 ```
 
+![](.gitbook/assets/image%20%2812%29.png)
+
+```sql
+USE [LABS]
+GO
+
+INSERT INTO [dbo].[STOCK_PRICE]
+           ([SYMBOL]
+           ,[DATE]
+           ,[QTY]
+           ,[OPEN]
+           ,[HIGH]
+           ,[LOW]
+           ,[CLOSE])
+ select '2330' [SYMBOL]
+			,[DATE]
+           ,Volume[QTY]
+           ,[OPEN]
+           ,[HIGH]
+           ,[LOW]
+           ,[CLOSE]
+from [dbo].[2330.TW (1)]
+```
+
 ![](.gitbook/assets/image%20%2811%29.png)
+
+```sql
+select * from [dbo].[STOCK_PRICE]
+where DATE> '2021-1-1' and SYMBOL='0050'
+```
 
 
 
