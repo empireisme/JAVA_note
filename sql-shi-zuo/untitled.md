@@ -1,4 +1,4 @@
-# Untitled
+# SQL stored procedure
 
 SQL stored procedure
 
@@ -25,5 +25,5 @@ GO
 
 ```
 
-
+利用declare 來執行
 
