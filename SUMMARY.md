@@ -52,5 +52,7 @@
   * [基礎SQL\(CRUD\)](sql/untitled.md)
   * [primary key和foreign key](sql/untitled-1.md)
   * [JOIN](sql/untitled-2.md)
-* [SQL 實作](sql-shi-zuo.md)
+* [SQL 實作](sql-shi-zuo/README.md)
+  * [Untitled](sql-shi-zuo/untitled.md)
+  * [索引](sql-shi-zuo/suo-yin.md)
 

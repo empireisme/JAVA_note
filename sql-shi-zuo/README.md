@@ -20,7 +20,7 @@ INSERT [GUIDdemo] (COL1) SELECT '第一列'
 SELECT * FROM [GUIDdemo];
 ```
 
-![](.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 ```sql
 USE [LABS]
@@ -44,7 +44,7 @@ INSERT INTO [dbo].[STOCK_PRICE]
 from [dbo].[2330.TW (1)]
 ```
 
-![](.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 ```sql
 select * from [dbo].[STOCK_PRICE]
