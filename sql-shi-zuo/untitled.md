@@ -27,3 +27,28 @@ GO
 
 利用declare 來執行
 
+```sql
+exec PR_GetPrices '2019/1/2'
+
+/*
+EXEC PR_GetPrices '2019/1/2'
+*/
+-- =============================================
+-- Author:		colin
+-- Create date: 2020.8.1
+-- Description:	回傳匯率資料
+-- =============================================
+ALTER PROCEDURE [dbo].[PR_GetPrices]
+@Date	date--匯率日期
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	SELECT * FROM EXCHANGE
+	WHERE [DATE]=@Date 
+END
+```
+
+
+
