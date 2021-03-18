@@ -73,6 +73,8 @@ PRINT @MAXNO
 
 {% file src="../.gitbook/assets/sql-server-ke-cheng-zuo-ye-.docx" caption="SQL 作業" %}
 
+{% file src="../.gitbook/assets/proc\_buy\_stock.sql" caption="作業三使用變數技巧" %}
+
 非常自豪地批次加入流水號
 
 {% file src="../.gitbook/assets/4.-bian-zhi-liu-shui-hao-2.sql" %}
