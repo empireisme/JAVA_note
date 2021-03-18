@@ -71,5 +71,7 @@ SELECT @MAXNO=RIGHT(REPLICATE('0',5) +@MAXNO,5)
 PRINT @MAXNO
 ```
 
+{% file src="../.gitbook/assets/sql-server-ke-cheng-zuo-ye-.docx" caption="SQL 作業" %}
+
 
 
