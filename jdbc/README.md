@@ -16,6 +16,8 @@ com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 把它貼在這裡
 
+第一種註冊方式
+
 ```java
 package day1;
 
