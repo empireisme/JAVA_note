@@ -86,9 +86,9 @@ public class conndemo {
 
 ## 要在MSSSQL做的設定
 
-MSSQL confige 當中開啟TCPIP連線
+### MSSQL confige 當中開啟TCPIP連線
 
-在
+### 在MSSQL server management 當中這樣設定
 
 ![&#x5728;&#x60F3;&#x8981;&#x7684;&#x8CC7;&#x6599;&#x5EAB;&#x7576;&#x4E2D;&#x505A;&#x9019;&#x4EF6;&#x4E8B;](../.gitbook/assets/image%20%2813%29.png)
 
