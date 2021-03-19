@@ -55,4 +55,6 @@
 * [SQL 實作](sql-shi-zuo/README.md)
   * [SQL stored procedure](sql-shi-zuo/untitled.md)
   * [索引](sql-shi-zuo/suo-yin.md)
+* [JDBC](jdbc.md)
+* [JDBC簡介](jdbc-jian-jie.md)
 
