@@ -103,7 +103,7 @@ public class conndemo {
 }
 ```
 
-![&#x8981;&#x5728;SQL&#x505A;&#x7684;&#x8A2D;&#x5B9A;](../.gitbook/assets/image%20%2817%29.png)
+![&#x8981;&#x5728;SQL&#x505A;&#x7684;&#x8A2D;&#x5B9A;](../.gitbook/assets/image%20%2818%29.png)
 
 ## 要在MSSSQL做的設定
 
@@ -143,4 +143,6 @@ public class conndemo {
 ```
 
 drivermanager是類別名稱，靜態方法是getConnection，故可以類別.方法直接使用
+
+![&#x8A18;&#x5F97;&#x8981;&#x91CB;&#x653E;](../.gitbook/assets/image%20%2817%29.png)
 
