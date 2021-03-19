@@ -34,5 +34,27 @@ public class jdbcdemo {
 }
 ```
 
+第二種註冊方式
+
+```java
+package day1;
+
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.util.Enumeration;
+import java.util.Iterator;
+
+public class JDBCexample2 {
+	public static void main(String[] args) {
+		
+		System.setProperty("jdbc.drivers","com.microsoft.sqlserver.jdbc.SQLServerDriver:com.mysql.cj.jdbc.Driver");
+//		DriverManger.registerDriver( new Driver);
+		Enumeration<Driver> e=DriverManager.getDrivers();
+		Iterator<Driver> it =e.asIterator();
+		it.forEachRemaining(System.out::println);
+	}
+}
+```
+
 
 
