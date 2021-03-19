@@ -60,5 +60,27 @@ public class JDBCexample2 {
 
 ## 連接
 
+```java
+package day1;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class conndemo {
+	public static void main(String[] args) {
+		String MSSQLurl="jdbc:sqlserver://localhost:1433;databaseName=LABS";
+//		String MySQLurl="  "+" "
+		try {
+			DriverManager.getConnection(MSSQLurl);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+```
+
 
 
