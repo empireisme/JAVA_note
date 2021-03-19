@@ -1,8 +1,19 @@
 # JDBC
 
+## 概述
+
+現在分成六個步驟
+
+1. 引入JDBCdriver
+2. 註冊JDBCdriver
+3. 建立起一個連線
+4. 執行SQL連線
+5. 從結果集得到資料
+6. 清理環境
+
 {% file src="../.gitbook/assets/sqljdbc\_9.2.1.0\_cht.zip" caption="MS SQL DRIVER" %}
 
-## JDBC的部署
+## 1.JDBC的引入
 
 下載上面的檔案到你喜歡的位置後
 
@@ -10,7 +21,7 @@
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 
-## JDBC的註冊
+## 2.JDBC的註冊
 
 其實現在都不需要了，會自動註冊
 
@@ -66,7 +77,7 @@ public class JDBCexample2 {
 }
 ```
 
-## 連接
+## 3.連接
 
 ```java
 package day1;
@@ -95,6 +106,8 @@ public class conndemo {
 ## 要在MSSSQL做的設定
 
 ### MSSQL confige 當中開啟TCPIP連線
+
+並且建立新的使用者和密碼使用SQL驗證登錄
 
 ### 在MSSQL server management 當中這樣設定
 
