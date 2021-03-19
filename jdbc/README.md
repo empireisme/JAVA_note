@@ -82,5 +82,9 @@ public class conndemo {
 }
 ```
 
+![&#x8981;&#x5728;SQL&#x505A;&#x7684;&#x8A2D;&#x5B9A;](../.gitbook/assets/image%20%2813%29.png)
 
+## 要在MSSSQL做的設定
+
+SSQL confige 當中開啟TCPIP連線
 
