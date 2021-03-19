@@ -4,6 +4,12 @@
 
 ## JDBC的部署
 
+下載上面的檔案到你喜歡的位置後
+
+![&#x5728;&#x5C08;&#x6848;&#x53F3;&#x9375;&#x5F8C;](../.gitbook/assets/image%20%2813%29.png)
+
+![](../.gitbook/assets/image%20%2816%29.png)
+
 ## JDBC的註冊
 
 其實現在都不需要了，會自動註冊
@@ -84,7 +90,7 @@ public class conndemo {
 }
 ```
 
-![&#x8981;&#x5728;SQL&#x505A;&#x7684;&#x8A2D;&#x5B9A;](../.gitbook/assets/image%20%2815%29.png)
+![&#x8981;&#x5728;SQL&#x505A;&#x7684;&#x8A2D;&#x5B9A;](../.gitbook/assets/image%20%2817%29.png)
 
 ## 要在MSSSQL做的設定
 
@@ -92,7 +98,7 @@ public class conndemo {
 
 ### 在MSSQL server management 當中這樣設定
 
-![&#x5728;&#x60F3;&#x8981;&#x7684;&#x8CC7;&#x6599;&#x5EAB;&#x7576;&#x4E2D;&#x505A;&#x9019;&#x4EF6;&#x4E8B;](../.gitbook/assets/image%20%2813%29.png)
+![&#x5728;&#x60F3;&#x8981;&#x7684;&#x8CC7;&#x6599;&#x5EAB;&#x7576;&#x4E2D;&#x505A;&#x9019;&#x4EF6;&#x4E8B;](../.gitbook/assets/image%20%2814%29.png)
 
-![&#x5728;&#x4E00;&#x822C; &#x64C1;&#x6709;&#x8005;&#x7D50;&#x69CB; &#x6210;&#x54E1;&#x8CC7;&#x683C; &#x90FD;&#x8A2D;&#x5B9A;&#x6210;db owner](../.gitbook/assets/image%20%2814%29.png)
+![&#x5728;&#x4E00;&#x822C; &#x64C1;&#x6709;&#x8005;&#x7D50;&#x69CB; &#x6210;&#x54E1;&#x8CC7;&#x683C; &#x90FD;&#x8A2D;&#x5B9A;&#x6210;db owner](../.gitbook/assets/image%20%2815%29.png)
 
