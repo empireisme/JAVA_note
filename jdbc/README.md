@@ -117,3 +117,30 @@ public class conndemo {
 
 ![&#x5728;&#x4E00;&#x822C; &#x64C1;&#x6709;&#x8005;&#x7D50;&#x69CB; &#x6210;&#x54E1;&#x8CC7;&#x683C; &#x90FD;&#x8A2D;&#x5B9A;&#x6210;db owner](../.gitbook/assets/image%20%2815%29.png)
 
+```java
+package day1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class conndemo {
+	public static void main(String[] args) {
+		String MSSQLurl="jdbc:sqlserver://localhost:1433;databaseName=LABS";
+//		String MySQLurl="  "+" "
+		String user="mike";
+		String password="c8763";
+		
+		try {
+			Connection conn=DriverManager.getConnection(MSSQLurl,user,password);
+			System.out.println("OK");  
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+```
+
+drivermanager是類別名稱，靜態方法是getConnection，故可以類別.方法直接使用
+
