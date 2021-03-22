@@ -55,3 +55,52 @@ public class test {
 
 ```
 
+```java
+package util;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+import com.sun.java_cup.internal.runtime.Scanner;
+
+public class test {
+	public static void main(String[] args) {
+//		ConnectionUtil connutil=new ConnectionUtil();
+		String SQLstr="SELECT [公司代號]\r\n"
+				+ "	  ,[公司名稱]\r\n"
+				+ "      ,[公司簡稱]\r\n"
+				+ "      ,[外國企業註冊地國]\r\n"
+				+ "      ,[產業別]\r\n"
+				+ "      ,[住址]\r\n"
+				+ " FROM [LABS].[dbo].[上市公司基本資料]\r\n"
+				+ " where [公司簡稱]='";//左括號
+		
+		try {
+			Connection conn=ConnectionUtil.getConnection("LABS");
+			Statement stmt=conn.createStatement();
+			java.util.Scanner sc=new Scanner(System.in);
+			ResultSet rs=stmt.executeQuery(SQLstr+sc.nextLine()+"'");//右括號
+			while(rs.next()) {
+				System.out.print("公司代號"+rs.getString(1));//1代表第1行
+				System.out.print("公司名稱"+rs.getString(2));
+//				System.out.println(rs);
+			}
+			System.out.println("接收成功");
+			conn.close();
+			sc.close();
+			System.out.println("連線關閉");
+  
+		}catch(SQLException e) {
+			e.printStackTrace();
+			
+		}
+	}
+
+}
+
+```
+
+
+
