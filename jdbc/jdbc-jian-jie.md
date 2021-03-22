@@ -102,5 +102,62 @@ public class test {
 
 ```
 
+## INSERT data
 
+```java
+package util;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Date;
+//動態，等你把問號傳給他
+
+public class test3 {
+	public static void main(String[] args) {
+//		ConnectionUtil connutil=new ConnectionUtil();
+		String SQLstr="INSERT INTO [dbo].[STOCK_PRICE]\r\n"
+				+ "           ([SYMBOL]\r\n"
+				+ "           ,[DATE]\r\n"
+				+ "           ,[QTY]\r\n"
+				+ "           ,[OPEN]\r\n"
+				+ "           ,[HIGH]\r\n"
+				+ "           ,[LOW]\r\n"
+				+ "           ,[CLOSE])\r\n"
+				+ "     VALUES\r\n"
+				+ "           (?\r\n"
+				+ "           ,?\r\n"
+				+ "           ,?\r\n"
+				+ "           ,?\r\n"
+				+ "           ,?\r\n"
+				+ "           ,?\r\n"
+				+ "           ,?)";//加上問號
+		
+		try {
+			//取得Connection物件
+			Connection conn=ConnectionUtil.getConnection("labs2");
+			//取得動態PreparedStatement物件
+			PreparedStatement pstmt=conn.prepareStatement(SQLstr);
+            //設定佔位符號的值
+			pstmt.setString(1, "0050");//第一個問號
+			pstmt.setDate(2, new Date(2007-1900,12,31));//第二個問號
+			pstmt.setInt(3, 100);
+			pstmt.setInt(4, 200);
+			pstmt.setInt(5, 100);
+			pstmt.setInt(6, 100);
+			pstmt.setInt(7, 100);
+			int i =pstmt.executeUpdate();
+			System.out.println("新增了"+i+"筆");
+			System.out.println("接收成功");
+			conn.close();
+			System.out.println("連線關閉");
+		}catch(SQLException e) {
+			e.printStackTrace();
+			System.out.println("錯誤囉");
+		}
+	}
+
+}
+
+```
 
