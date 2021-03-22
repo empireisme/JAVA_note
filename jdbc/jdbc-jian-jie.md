@@ -161,3 +161,53 @@ public class test3 {
 
 ```
 
+## UPDATE
+
+```java
+package util;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Date;
+public class test3 {
+	public static void main(String[] args) {
+//		ConnectionUtil connutil=new ConnectionUtil();
+		String SQLstr="UPDATE [dbo].[STOCK_PRICE]\r\n"
+				+ "   SET [SYMBOL] = ?\r\n"
+				+ "      ,[QTY] = ?\r\n"
+				+ "      ,[OPEN] = ?\r\n"
+				+ "      ,[HIGH] = ?\r\n"
+				+ "      ,[LOW] = ?\r\n"
+				+ "      ,[CLOSE] = ?\r\n"
+				+ " WHERE DATE=?";
+		
+		try {
+			//取得Connection物件
+			Connection conn=ConnectionUtil.getConnection("labs2");
+			//取得動態PreparedStatement物件
+			PreparedStatement pstmt=conn.prepareStatement(SQLstr);
+            //設定佔位符號的值
+			pstmt.setString(1, "0087");//第一個問號
+			pstmt.setInt(2, 210);//第二個問號
+			pstmt.setInt(3, 100);
+			pstmt.setInt(4, 150);
+			pstmt.setInt(5, 584);
+			pstmt.setInt(6, 453);
+			pstmt.setString(7, "4909-01-31");
+			int i =pstmt.executeUpdate();
+			System.out.println("更正了"+i+"筆");
+			System.out.println("接收成功");
+			conn.close();
+			System.out.println("連線關閉");
+		}catch(SQLException e) {
+			e.printStackTrace();
+			System.out.println("錯誤囉");
+		}
+	}
+
+}
+```
+
+
+
