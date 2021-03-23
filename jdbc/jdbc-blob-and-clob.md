@@ -4,7 +4,7 @@ description: 如何把圖片放入資料夾
 
 # JDBC BLOB and CLOB
 
-## BLOB
+## 把圖片放入資料庫
 
 1. 先放SQL指令
 2. FileinputStream
@@ -91,5 +91,59 @@ public class ConnectionUtil {
 }
 ```
 
+## 把圖片從資料庫拿出來放到指定資料夾
 
+```java
+package util;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+public class testblobOut {
+
+	public static void main(String[] args){
+		String SQLstr="SELECT [FileName]"
+				+ ",[File]"
+				+ "FROM [LABS].[dbo].[MyFile_Table]";//two ?? 
+		//provide index 1 and 2 
+		
+		try {
+			Connection conn = ConnectionUtil.getConnection("LABS");
+			PreparedStatement pstmt=conn.prepareStatement(SQLstr);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+		
+				FileOutputStream fout=new FileOutputStream("pic/"+rs.getString(1));
+				//constructer use to name the picture name
+				InputStream in=rs.getBinaryStream(2);//from database to java
+				int i;
+				while((i=in.read())!=-1) {
+					fout.write(i);
+				}
+				fout.flush();//把記憶體資料衝出去
+				fout.close();
+				in.close();
+			
+			}
+			conn.close();
+			
+		} catch (SQLException | FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+```
 
