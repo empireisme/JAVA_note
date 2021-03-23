@@ -147,3 +147,56 @@ public class testblobOut {
 
 ```
 
+## ResultSet metadata
+
+```java
+package util;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+
+
+
+public class resultsetmetadata {
+	public static void main(String[] args) {
+		String SQLstr="SELECT *"
+				+ "FROM [LABS].[dbo].[上市公司基本資料]";
+		
+	try {
+		Connection 	conn = ConnectionUtil.getConnection("LABS");
+		PreparedStatement pstmt=conn.prepareStatement(SQLstr);
+		ResultSet rs = pstmt.executeQuery();
+		ResultSetMetaData rsmd =rs.getMetaData();
+		
+		int i1=rsmd.getColumnCount();
+		System.out.println("共有"+i1+"欄位");
+		while(rs.next()) {
+			for(int i2=1;i2<=i1;i2++) {
+				System.out.println(rsmd.getColumnName(i2)+rs.getString(i2));
+//				System.out.println(rsmd.getColumnLabel(i2));
+//				System.out.println(rsmd.getColumnType(i2));
+//				System.out.println(rsmd.getColumnDisplaySize(i2));
+//				System.out.println(rsmd.isNullable(i2));
+				
+			}
+			
+		}
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+//	System.out.println();
+		
+	}
+
+}
+
+```
+
+
+
