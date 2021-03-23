@@ -56,6 +56,6 @@
   * [SQL stored procedure](sql-shi-zuo/untitled.md)
   * [索引](sql-shi-zuo/suo-yin.md)
 * [JDBC](jdbc/README.md)
-  * [JDBC BLOB and CLOB](jdbc/jdbc-blob-and-clob.md)
   * [JDBC包成class](jdbc/jdbc-jian-jie.md)
+  * [JDBC BLOB and CLOB](jdbc/jdbc-blob-and-clob.md)
 

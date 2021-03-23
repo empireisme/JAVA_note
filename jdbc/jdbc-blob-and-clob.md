@@ -67,3 +67,29 @@ public class testblob {
 
 ![](../.gitbook/assets/image%20%2819%29.png)
 
+```java
+package util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectionUtil {
+	private static String MSSQLurl="jdbc:sqlserver://localhost:1433;databaseName=";
+//	String MySQLurl="  "+" "
+	private static String user="kirito";
+	private static String password="c8763";
+	//start writing method
+	public static Connection getConnection(String dbname) throws SQLException {//要記得throw
+		String url = MSSQLurl+dbname;
+		Connection conn=DriverManager.getConnection(url,user,password);
+		System.out.println("連線成功");
+		return conn;
+	
+	}
+
+}
+```
+
+
+
