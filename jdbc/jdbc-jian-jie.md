@@ -1,6 +1,6 @@
 # JDBC包成class
 
-類別
+## 使用CLASS做連線設定
 
 ```java
 package util;
@@ -27,7 +27,7 @@ public class ConnectionUtil {
 
 ```
 
-main
+MAIN方法中去看連線
 
 ```java
 package util;
