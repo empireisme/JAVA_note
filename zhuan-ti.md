@@ -12,5 +12,7 @@
 
 {% embed url="https://howtodoinjava.com/gson/gson-parse-json-array/" %}
 
+{% embed url="https://mkyong.com/java/gson-how-to-parse-json-arrays-an-array-of-arrays/" %}
+
 
 
