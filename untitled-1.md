@@ -2,7 +2,7 @@
 
 ## 連線class
 
-```text
+```java
 package iii_project;
 
 import java.sql.Connection;
@@ -28,7 +28,7 @@ public class ConnectionUtil {
 
 ## ITEM
 
-```text
+```java
 package iii_project;
 
 import java.util.Arrays;
@@ -82,7 +82,7 @@ public class Item {
 
 ## ITemtype
 
-```text
+```java
 package iii_project;
 
 public class ItemType {
@@ -155,7 +155,7 @@ public class ItemType {
 
 ## mainprogram
 
-```text
+```java
 package iii_project;
 
 import java.io.InputStreamReader;
