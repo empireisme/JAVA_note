@@ -24,5 +24,7 @@
 
 {% embed url="https://stackoverflow.com/questions/19154202/data-access-object-dao-in-java" %}
 
+{% embed url="https://kajalrawal.medium.com/dto-dao-and-mvc-concept-c460046b139b" %}
+
 
 
