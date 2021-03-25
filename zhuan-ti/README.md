@@ -1,8 +1,8 @@
-# 專題
+# 期中專題
 
 ## 專題架構
 
-![](.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 
 
