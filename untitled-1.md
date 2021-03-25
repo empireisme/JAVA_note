@@ -1,6 +1,6 @@
 # 專題code
 
-## 連線class
+## 連線設定用的class
 
 ```java
 package iii_project;
