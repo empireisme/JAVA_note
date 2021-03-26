@@ -54,5 +54,32 @@
 
 ![](.gitbook/assets/image%20%2823%29.png)
 
+## CSS
 
+```markup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .str1{
+            color: yellow;
+        }
+        .str2{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="str1">我是標楷體</h1>
+    <h1 class="str2">我是標楷體</h1>
+    
+</body>
+</html>
+```
+
+![](.gitbook/assets/image%20%2824%29.png)
 
