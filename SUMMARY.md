@@ -59,5 +59,5 @@
   * [JDBC包成class](jdbc/jdbc-jian-jie.md)
   * [JDBC BLOB and CLOB](jdbc/jdbc-blob-and-clob.md)
 * [期中專題](zhuan-ti/README.md)
-  * [專題code](zhuan-ti/untitled-1.md)
+  * [期中專題code](zhuan-ti/untitled-1.md)
 
