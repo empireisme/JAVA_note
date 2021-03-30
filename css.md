@@ -194,3 +194,22 @@
 
 {% file src=".gitbook/assets/form\_example.html" %}
 
+## datalist and list
+
+```markup
+<html>
+<body>
+
+<input list="cars" />
+<datalist id="cars">
+	<option value="BMW">
+	<option value="Ford">
+	<option value="Volvo">
+</datalist>
+
+</body>
+</html>
+```
+
+![](.gitbook/assets/image%20%2825%29.png)
+
