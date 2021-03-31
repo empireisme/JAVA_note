@@ -30,12 +30,39 @@
 
 當螢幕寬度小於500pixel的時候，便會將字體變成紅色外加字的大小變成100px
 
-## 利用link技巧讓所有css可以分開放，之後集中的引入
+## 字體font設定外加使用link技巧
+
+使用link技巧可以讓css檔案分開放，之後集中在link.css這個檔案集中
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url(st1.css);
 @import url(font.css);
+```
+
+```markup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/link.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" >
+    <style>
+        
+
+    </style>
+</head>
+<body>
+    <h1 class="font1">APPle</h1>
+    <h1 class="font2">orange</h1>
+        <p>asfas;ldfja;sldkf</p>
+    <div style="width: 200px;border: 1px solid blue;padding-top: 50px; padding-bottom: 50px;">沒有高度指定的對其文字 </div>
+    
+</body>
+</html>
 ```
 
 ## 好看的表單範例
