@@ -42,3 +42,9 @@
 
 ```
 
+{% embed url="https://docs.google.com/document/d/1mSxRmAUx-rm0wJ9MtkISwTemZmilFguXhMLavy-zxkg/edit\#" %}
+
+{% embed url="https://ithelp.ithome.com.tw/articles/10094951" %}
+
+
+
