@@ -1,0 +1,49 @@
+# 動態樣式
+
+```markup
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01dynamicStyle.html</title>
+    <style>
+        .n{
+			color:blue;
+			font-family:Arial;
+			font-size:24px;
+		}
+		.s{
+			color:red;
+			font-family:"Script MT Bold";
+			font-size:36px;
+		}
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("h").addEventListener("mouseover",mouseOver);  //事件繫結，滑鼠滑入
+            document.getElementById("h").addEventListener("mouseout",mouseOut);    //事件繫結，滑鼠滑出
+        });
+
+        function mouseOver() {
+            //動態樣式改變，方法 1
+            // document.getElementById("h").style.color="red";
+            //動態樣式改變，方法 2
+            // document.getElementById("h").className="s"
+            this.className="s"
+        }
+
+        function mouseOut() {
+            //動態樣式改變，方法 1
+            // document.getElementById("h").style.color="blue";
+            //動態樣式改變，方法 2
+            // document.getElementById("h").className="n"
+            this.className="n"
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h" class="n" >this is heading 1</h1>
+</body>
+</html>
+```
+
