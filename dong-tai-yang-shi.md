@@ -224,14 +224,16 @@
         //3. 使用 document.querySelectorAll("area")取得所有area元素(slide 93)  
         //=============================================================
         document.addEventListener("DOMContentLoaded", function () {
-            // document.querySelector("#idTaipei").addEventListener("mouseover",mouseOver);//事件繫結
+           // 1. document.querySelector("#idTaipei").addEventListener("mouseover",mouseOver);//事件繫結
             // document.querySelector("#idTaipei").addEventListener("mouseout",mouseOut);
             // document.querySelector("#idTaipei").addEventListener("click",Click); 
             // document.querySelector("#idTaoyuan").addEventListener("mouseover",mouseOver);//事件繫結
             // document.querySelector("#idTaoyuan").addEventListener("mouseout",mouseOut);
             // document.querySelector("#idTaoyuan").addEventListener("click",Click);      
             
-            let areas=document.getElementsByTagName("area");
+            //2. let areas=document.getElementsByTagName("area");
+            let areas=document.querySelectorAll("area.imgbtn");
+            //可以更細緻的去定義
             let areasLen=areas.length;
             console.log(areas);
             console.log(areas.length);
@@ -245,7 +247,7 @@
         function mouseOver() {   
             console.log(this);
             console.log(this.id);    
-            document.images[0].src = "images/Map"+this.id.substr(2)+".gif";
+            document.getElementById("imgMap").src="images/Map"+this.id.substr(2)+".gif";
         }//滑入要畫圖
 
 
@@ -264,15 +266,16 @@
     <div style="float:left;width:200px;height:343px;margin-top:20px;">
         <img id="imgMap" alt="" src="images/map00.gif"  usemap="#FPMap0"/>
             <map id="FPMap0" name="FPMap0">
-                <area  id="idTaipei" coords="136,21,144,13,151,29,145,38,136,21"  shape="poly" />
-                <area  id="idTaoyuan" coords="95,38,120,22,132,34,125,45,138,64,128,78,95,37"  shape="poly" />
-                <area  id="idTaichung" coords="46,113,58,89,87,104,120,91,134,100,122,113,81,122,70,134,45,112,45,112"  shape="poly" />
-                <area  id="idKaohsiung" coords="18,241,39,242,86,185,98,201,76,243,72,250,46,251,39,283,25,259,18,240"  shape="poly" />
+                <area  id="idTaipei" class="imgbtn" coords="136,21,144,13,151,29,145,38,136,21"  shape="poly" />
+                <area  id="idTaoyuan" class="imgbtn" coords="95,38,120,22,132,34,125,45,138,64,128,78,95,37"  shape="poly" />
+                <area  id="idTaichung"  coords="46,113,58,89,87,104,120,91,134,100,122,113,81,122,70,134,45,112,45,112"  shape="poly" />
+                <area  id="idKaohsiung" class="imgbtn" coords="18,241,39,242,86,185,98,201,76,243,72,250,46,251,39,283,25,259,18,240"  shape="poly" />
             </map>
     </div>
     <div id="mapdiv" style="float:left;width:auto;height:auto;"></div>
 </body>
 </html>
+
 
 ```
 
