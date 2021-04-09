@@ -147,7 +147,5 @@
 
 ```
 
-{% embed url="https://stackoverflow.com/questions/24319295/date-leap-year-validation-regex" %}
-
 
 
