@@ -107,5 +107,54 @@
 
 ```
 
+## 氣泡設定
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>06eventTargetcurrentTarget.html</title>
+    <script>
+        //==============================================================
+        //階層式標籤，事件流程分三階段，
+        //事件捕獲(capture)階段==>處理目標階段==>事件氣泡(bubbling)階段
+        //==============================================================
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("idp").addEventListener("click",clickP); //事件繫結，事件氣泡(bubbling)
+            document.getElementById("idbut").addEventListener("click",clickBut);
+        });
+        
+
+        //target：回傳觸發事件的元素 被你click的元素
+        //currentTarget：回傳事件正在處理時所在的元素
+        //[object class] 一個物件的類別(class)屬性是個字串，提供關於該物件的種類的資訊
+        function clickP(nsevent) {
+            alert("input target="+event.target.id+
+            "\n p currentTarget="+event.currentTarget.id+
+            "\n p this="+this.id
+            );   
+            // console.log("p");
+            // console.log(nsevent.target)
+        }
+
+        function clickBut() {
+            alert("input target="+event.target.id+
+            "\n p currentTarget="+event.currentTarget.id
+            );
+            
+
+        }
+    </script>
+</head>
+<body>
+    <p id="idp">
+       <input type="button" id="idbut" value="button" />            
+    </p>
+</body>
+</html>
+
+```
+
 
 
