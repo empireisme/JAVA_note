@@ -279,3 +279,51 @@
 
 ```
 
+## 表單的驗證
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>12formObject.html</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#idbutton").addEventListener("click",checkf);//事件繫結
+            document.querySelector("#idreset").addEventListener("click",resetf);
+            document.querySelector("#idsubmit").addEventListener("click",submitf);
+        });
+
+        function checkf() {
+
+        }
+
+        function resetf() {
+            document.forms[0].reset();
+        }
+
+        function submitf() {
+            if(document.getElementById("idname").value=="")
+               alert("please type something")
+            else{
+                document.forms[0].submit()
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="get.jsp" method="get">
+			<label>name:</label><input type="text" id="idname" name="txtName" value="abc" /><span id="idsp"></span><br/>
+			<input type="checkbox" name="hobby" checked="checked" value="reading"/>reading
+			<input type="checkbox" name="hobby" value="game"/>game
+			<input type="checkbox" name="hobby" value="sleep"/>sleep
+			<br/>
+            <input type="submit" value="送出" />	
+            <input id="idbutton" type="button" value="check" />
+            <input id="idreset" type="button" value="reset" />
+			<input id="idsubmit" type="button" value="submit" />
+	</form>
+</body>
+</html>
+```
+
