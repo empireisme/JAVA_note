@@ -400,3 +400,50 @@
 </html>
 ```
 
+## DOM進階
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>02DOM2.html</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#CEle").addEventListener("click", CreateElement)
+            document.querySelector("#REle").addEventListener("click",RemoveElement)
+        });
+        function RemoveElement(){
+            let theNode=document.getElementById("idImg");
+            theNode.parentNode.removeChild(theNode);//old method
+            theNode.remove();//new method
+        }
+
+        function CreateElement() {
+            let theDIV = document.querySelector("#iddiv");  //取得div物件
+
+            let eleP = document.createElement("p");//<P><P/>
+            let txtP = document.createTextNode("Hello World");//HELLO WORLD
+            eleP.appendChild(txtP);//<p>
+
+            theDIV.appendChild(eleP);
+
+            let eleImg = document.createElement("img");
+            eleImg.setAttribute("src", "DOM/DOMImage/rabbit-hat.gif");
+            eleImg.setAttribute("id","idImg")
+            theDIV.appendChild(eleImg);
+            //
+        }
+    </script>
+</head>
+
+<body>
+    <div id="iddiv">div</div>
+    <input type="button" id="CEle" value="CreateElement">
+    <input type="button" id="REle" value="RemoveElement">
+
+</body>
+</html>
+
+```
+
