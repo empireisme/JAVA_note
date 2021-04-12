@@ -329,3 +329,74 @@
 
 {% file src=".gitbook/assets/jshomework.zip" %}
 
+## dom介紹
+
+```markup
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>01DOM.html</title>
+    <script>
+        //*****************************************
+        //nodeName 讀取元素節點內容，得到是元素名稱
+        //nodeValue 讀取文字節點內容，得到的是文字內容
+        //nodeType 讀取節點類型
+        //*****************************************
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // alert(document.nodeType);  //9
+            // alert(document.nodeName);  //#document
+            // alert(document.nodeValue);  //null
+
+            //取得根元素 documentElement
+            let root = document.documentElement;  //HTML
+            // alert(root.nodeType);  //1
+            // alert(root.nodeName);  //HTML
+            // alert(root.nodeValue);  //null
+
+            let thebody = root.childNodes[1];  //BODY
+            // alert(thebody.nodeName);//body
+            // alert(thebody.childNodes[1].nodeName);//p
+            // alert(thebody.childNodes[1].firstChild.nodeValue); //i am a javascript
+            // alert(thebody.childNodes[1].childNodes[0].nodeValue);
+
+            let theNode = root.childNodes[1].childNodes[3].childNodes[3];  //LI
+            // alert(root.childNodes[1].childNodes[3].nodeName);
+            // alert(theNode.nodeName);
+            //alert(theNode.firstChild.nodeValue);  //bbbbb
+            //alert(theNode.previousSibling.previousSibling.firstChild.nodeValue);  //aaaaa
+            //alert(theNode.nextSibling.nextSibling.firstChild.nodeValue);  //ccccc
+
+            //alert(theNode.parentNode.nodeName);  //UL
+            //alert(theNode.parentNode.lastChild.previousSibling.firstChild.nodeValue);  //fffff
+
+
+            let lis = document.getElementsByTagName("li");
+            for (let i = 0; i < lis.length; i++) {
+                console.log(lis.item(0));
+                //ITEM是方法，所以用小括弧
+                alert(lis.item(i).firstChild.nodeValue);
+                //alert(lis[i].firstChild.nodeValue);
+                //ARRAY LIKE 顧可以用索引
+            }
+
+
+        });
+    </script>
+</head><body><h1>Hello DOM</h1><p>I am a JavaScript</p>
+    <ul>     
+        <!-- childnode3 -->
+        <li>aaaaa</li>
+        <li>bbbbb</li>
+        <li>ccccc</li>
+        <li>ddddd</li>
+        <li>eeeee</li>
+        <li>fffff</li>
+    </ul>
+</body>
+
+</html>
+```
+
