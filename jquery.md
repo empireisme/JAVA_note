@@ -40,3 +40,39 @@ $("#h").css("color","red");
 
 ```
 
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01documentReady.html</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        //JS
+        // document.addEventListener("DOMContentLoaded",function(){
+        //     $("h1").css("color","red");
+        // })
+        //jQuery
+        //ready是一個事件，等到DOMTree產生後會執行這個事件
+        // jQuery(document).ready(function(){
+            
+        //  })
+        //jQuery 省略ready
+         $(function(){
+            $("h1").css("color","green");
+         })
+        
+    </script>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <h1>write less,do more</h1> 
+    <h1>write more,do less</h1>
+    <!-- <script src="../js/jquery-3.6.0.min.js"></script> -->
+
+</body>
+</html>
+```
+
