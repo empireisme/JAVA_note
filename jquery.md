@@ -76,3 +76,46 @@ $("#h").css("color","red");
 </html>
 ```
 
+## this vs $\(this\)
+
+```javascript
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <title>04hover.html</title>
+  <style>
+    p {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Hello, <span>Person</span> <em>and person</em>.
+  </p>
+
+  <p id="idp">ppppppppppp</p>
+
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script>
+    $("p").hover(function () {
+      // $(this).css("color","red");//用selector改
+      this.style.color = "red";//用js去改顏色
+    }, function () {
+      $(this).css("color", "blue");
+    });
+
+    $("#idp").hover(function () {
+      $(this).css("color", "green");
+    }, function () {
+      $(this).css("color", "purple");
+    });
+  </script>
+</body>
+
+</html>
+```
+
