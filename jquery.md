@@ -260,7 +260,7 @@ $("#h").css("color","red");
 
 ![](.gitbook/assets/image%20%2827%29.png)
 
-## 點甚麼便甚麼
+## 點甚麼便甚麼 有src技術
 
 ```javascript
 <!doctype html>
