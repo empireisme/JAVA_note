@@ -260,3 +260,73 @@ $("#h").css("color","red");
 
 ![](.gitbook/assets/image%20%2827%29.png)
 
+## 點甚麼便甚麼
+
+```javascript
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>04PhotoaddClass.html</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        figure{
+            width:20%;
+            border: 4px solid transparent;
+            margin: 4px;
+            width: 120px;
+            height: 120px;
+        }
+        figure.active{
+            border: 4px solid red;
+        }
+        figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="py-2 text-center">
+              <img id="mainPic" src="images/pokemon1.png" alt="">
+          </div> 
+          <div class="d-flex justify-content-center">
+              <figure class="active">
+                  <img src="images/pokemon1.png" alt="">
+              </figure>
+              <figure>
+                    <img src="images/pokemon2.png" alt="">
+                </figure>
+                <figure>
+                        <img src="images/pokemon3.png" alt="">
+                    </figure>
+                    <figure>
+                            <img src="images/pokemon4.png" alt="">
+                        </figure>
+                        <figure>
+                                <img src="images/pokemon5.png" alt="">
+                            </figure>
+          </div>
+      </div>
+      <script src="../js/jquery-3.6.0.min.js"></script>
+      <script>
+        $("figure").click(function(){
+            console.log(this);
+            let pic=$(this).find("img").attr("src");
+            console.log(pic)
+            $("#mainPic").attr("src",pic)
+            $(this).addClass("active")
+            .siblings().removeClass("active")
+
+
+            
+        });
+    </script>
+  </body>
+</html>
+```
+
+![](.gitbook/assets/image%20%2828%29.png)
+
