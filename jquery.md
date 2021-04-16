@@ -119,3 +119,142 @@ $("#h").css("color","red");
 </html>
 ```
 
+## 動態binding
+
+```javascript
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>05eventBinding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body> 
+    <div class="container">
+    <table id="idtable" class="table table-bordered table-sm" >
+            <tr>
+                <td>A0</td>
+                <td>B1</td>
+                <td>C2</td>
+                <td><a href="#" class="btn btn-danger">刪除</a></td>
+            </tr>
+            <tr>
+                <td>D3</td>
+                <td>E4</td>
+                <td>F5</td>
+                <td><a href="#" class="btn btn-danger">刪除</a></td>
+            </tr>
+            <tr>
+                <td>G6</td>
+                <td>H7</td>
+                <td>I8</td>
+                <td><a href="#" class="btn btn-danger">刪除</a></td>
+            </tr>
+        </table>
+        <input class="btn btn-primary" type="button" value="add row" id="buttonAdd" >
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+        <script>
+            //測試看看
+            //按下刪除按鈕(class名稱是btn-danger)時,可以將那一筆資料刪除
+            //再試試看
+            //按下[add row]按鈕多新增幾筆資料
+            //針對新增出來的資料,按下刪除按鈕(class名稱是btn-danger)時,還可以將那一筆資料刪除嗎???
+            // $('.btn-danger').click(function () {
+            //     //$(this).parent().parent().remove();
+            //     // $(this).parents('tr').remove(); 
+            //     $(this).closest("tr").remove();        
+            // });   
+
+
+            //練習使用on繫結網頁上刪除按鈕，完成刪除動作
+            //此時新增的還不能山
+            //此時要用動態binding才能動
+            $("#idtable").on("click",".btn-danger",function(){
+                $(this).closest("tr").remove(); 
+            })
+
+            
+
+            $('#buttonAdd').click(function () {
+                $('table').append("<tr><td>X</td><td>Y</td><td>Z</td><td><a href='#' class='btn btn-danger'>刪除</a></td></tr>");                    
+            });                                       
+        </script>
+</body>
+</html>
+```
+
+## APPEND
+
+```javascript
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>05AppendRemove</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+  <body>
+      <div class="container">
+          <div class="py-2">
+              <form class="form-inline">
+                  <div class="form-group mr-2">
+                      <label for="" class="mr-2">姓名</label>
+                      <input type="text" name="" id="name" class="form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+                  <div class="form-group mr-2">
+                        <label for="" class="mr-2">電話</label>
+                        <input type="tel" name="" id="tel" class="form-control" placeholder="" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group mr-2">
+                            <label for="" class="mr-2">email</label>
+                            <input type="email" name="" id="email" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <a class="btn btn-primary text-white" id="add"><i class="fas fa-user-plus"></i></a>
+                        </div>
+              </form>
+          </div>
+        <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>電話</th>
+                        <th>email</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>John</td>
+                        <td>0900000000</td>
+                        <td>john@test.com</td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr> -->
+                </tbody>
+        </table>
+      </div>
+      <script src="../js/jquery-3.6.0.min.js"></script>
+      <script>
+            $("#add").click(function(){
+                let name=$("#name").val()
+                let tel=$("#tel").val()
+                let email=$("#email").val()
+                let newrow=`<tr>
+                        <td>${name}</td>
+                        <td>${tel}</td>
+                        <td>${email}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>`;
+                    $("#tbody").append(newrow);
+            });
+      </script>
+</body>
+</html>
+```
+
