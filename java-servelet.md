@@ -26,9 +26,17 @@ public class MyServlet02 extends HttpServlet {
 }
 ```
 
-![](.gitbook/assets/image%20%2830%29.png)
+![](.gitbook/assets/image%20%2833%29.png)
+
+![](.gitbook/assets/image%20%2832%29.png)
+
+![](.gitbook/assets/image%20%2834%29.png)
+
+## 利用XML更改初始參數，讓廠商可以不用動到程式碼修改
 
 ![](.gitbook/assets/image%20%2829%29.png)
 
 ![](.gitbook/assets/image%20%2831%29.png)
+
+![](.gitbook/assets/image%20%2830%29.png)
 
