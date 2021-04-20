@@ -26,3 +26,9 @@ public class MyServlet02 extends HttpServlet {
 }
 ```
 
+![](.gitbook/assets/image%20%2830%29.png)
+
+![](.gitbook/assets/image%20%2829%29.png)
+
+![](.gitbook/assets/image%20%2831%29.png)
+
