@@ -135,9 +135,13 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2846%29.png)
 
+![](.gitbook/assets/image%20%2849%29.png)
+
+## 4/21MVC架構
+
 ![](.gitbook/assets/image%20%2848%29.png)
 
-4/21下午
-
 ![](.gitbook/assets/image%20%2842%29.png)
+
+
 
