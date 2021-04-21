@@ -109,7 +109,7 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2838%29.png)
 
-### javaservlet
+### 4/21 javaservlet 
 
 ![](.gitbook/assets/image%20%2839%29.png)
 
