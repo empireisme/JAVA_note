@@ -119,3 +119,7 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2840%29.png)
 
+### 多檔案上傳
+
+![](.gitbook/assets/image%20%2842%29.png)
+
