@@ -111,19 +111,29 @@ public class S03_testinit2 extends HttpServlet {
 
 ### Javaservlet 
 
-![](.gitbook/assets/image%20%2839%29.png)
+![](.gitbook/assets/image%20%2841%29.png)
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2844%29.png)
 
 #### iE 取得檔案名稱
 
-![](.gitbook/assets/image%20%2840%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 ### 多檔案上傳
 
-![](.gitbook/assets/image%20%2843%29.png)
+![](.gitbook/assets/image%20%2846%29.png)
 
 ## 重新導向網頁
 
-![](.gitbook/assets/image%20%2841%29.png)
+![](.gitbook/assets/image%20%2843%29.png)
+
+## 假裝的重新導向
+
+![](.gitbook/assets/image%20%2839%29.png)
+
+![](.gitbook/assets/image%20%2840%29.png)
+
+![](.gitbook/assets/image%20%2845%29.png)
+
+![](.gitbook/assets/image%20%2847%29.png)
 
