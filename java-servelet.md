@@ -113,7 +113,7 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2839%29.png)
 
-![](.gitbook/assets/image%20%2841%29.png)
+![](.gitbook/assets/image%20%2842%29.png)
 
 #### iE 取得檔案名稱
 
@@ -121,5 +121,9 @@ public class S03_testinit2 extends HttpServlet {
 
 ### 多檔案上傳
 
-![](.gitbook/assets/image%20%2842%29.png)
+![](.gitbook/assets/image%20%2843%29.png)
+
+## 重新導向網頁
+
+![](.gitbook/assets/image%20%2841%29.png)
 
