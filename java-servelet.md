@@ -103,3 +103,13 @@ public class S03_testinit2 extends HttpServlet {
 
 ```
 
+## 檔案上傳
+
+### html
+
+![](.gitbook/assets/image%20%2838%29.png)
+
+### javaservlet
+
+![](.gitbook/assets/image%20%2839%29.png)
+
