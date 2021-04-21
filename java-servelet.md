@@ -147,11 +147,15 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2853%29.png)
 
-![](.gitbook/assets/image%20%2854%29.png)
+![](.gitbook/assets/image%20%2855%29.png)
 
 ## cookie 存取
 
 ![](.gitbook/assets/image%20%2850%29.png)
 
 ![](.gitbook/assets/image%20%2851%29.png)
+
+## Session
+
+![](.gitbook/assets/image%20%2854%29.png)
 
