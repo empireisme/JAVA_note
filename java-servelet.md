@@ -1,5 +1,11 @@
 # JAVA servelet
 
+## 利用form取得資訊
+
+![](.gitbook/assets/image%20%2852%29.png)
+
+## 
+
 ## heloo
 
 ```java
@@ -143,11 +149,11 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2842%29.png)
 
-![](.gitbook/assets/image%20%2852%29.png)
-
 ![](.gitbook/assets/image%20%2853%29.png)
 
-![](.gitbook/assets/image%20%2855%29.png)
+![](.gitbook/assets/image%20%2854%29.png)
+
+![](.gitbook/assets/image%20%2856%29.png)
 
 ## cookie 存取
 
@@ -157,5 +163,5 @@ public class S03_testinit2 extends HttpServlet {
 
 ## Session
 
-![](.gitbook/assets/image%20%2854%29.png)
+![](.gitbook/assets/image%20%2855%29.png)
 
