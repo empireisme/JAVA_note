@@ -69,4 +69,5 @@
 * [JQuery](jquery.md)
 * [資策會檔案](zi-ce-hui-dang-an.md)
 * [JAVA servelet](java-servelet.md)
+* [JQUERY期中考](jquery-qi-zhong-kao.md)
 
