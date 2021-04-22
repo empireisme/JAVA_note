@@ -79,5 +79,9 @@
 
 ![](.gitbook/assets/image%20%2857%29.png)
 
+## 檔案下載區
 
+{% file src=".gitbook/assets/hw4.html" caption="hw4重購前" %}
+
+{% file src=".gitbook/assets/hw4\_rebuild.html" caption="hw4重購後" %}
 

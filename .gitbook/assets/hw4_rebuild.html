@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //event binding
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("idchangeNextImg").addEventListener("click", changeNextImg);
+        // document.getElementById("idbutstop").addEventListener("click", stopf);
+        document.getElementById("idchangeBeforeImg").addEventListener("click", changeBeforeImg);
+
+        let counter = 1;
+        function changeNextImg() {
+   
+        counter++;
+        show();
+
+        }
+        function changeBeforeImg() {
+            counter--;
+            show();
+        }
+        function show(){
+            if (counter >5) {
+                counter = 1;
+            } 
+            if (counter < 1) {
+                counter = 5;
+            }
+            buildimg = `images/iphone${counter}.jpg`;
+            document.getElementById("theImage").setAttribute('src', buildimg);
+        }
+    });
+</script>
+
+
+<body>
+    <div>
+        <img id="theImage" src="images/iphone1.jpg" alt=""  height="300">
+        <p><input type="button" id="idchangeNextImg" value="換下一張圖片"></p>
+        <p><input type="button" id="idchangeBeforeImg" value="換上一張圖片"></p>
+
+    </div>
+
+
+</body>
+
+</html>
