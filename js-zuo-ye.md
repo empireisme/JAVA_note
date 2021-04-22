@@ -77,6 +77,8 @@
 
 ## 重購後
 
+重購邏輯是靠show function來做讓你setinterval
+
 ![](.gitbook/assets/image%20%2857%29.png)
 
 ```markup
@@ -140,4 +142,8 @@
 {% file src=".gitbook/assets/hw4\_rebuild.html" caption="hw4重購後" %}
 
 {% file src=".gitbook/assets/hw4.zip" caption="hw4\_all\_zip" %}
+
+{% embed url="https://stackoverflow.com/questions/4986667/jquery-how-to-restart-setinterval-after-killing-it-off-with-clearinterval" %}
+
+
 
