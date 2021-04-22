@@ -60,6 +60,7 @@
   * [JDBC BLOB and CLOB](jdbc/jdbc-blob-and-clob.md)
 * [期中專題](zhuan-ti/README.md)
   * [期中專題code](zhuan-ti/untitled-1.md)
+* [JS作業](js-zuo-ye.md)
 * [HTML](html.md)
 * [CSS](css.md)
 * [RWD設計入門](rwd-she-ji-ru-men.md)
