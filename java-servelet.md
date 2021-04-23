@@ -171,13 +171,13 @@ public class S03_testinit2 extends HttpServlet {
 
 ## Cookie
 
-![](.gitbook/assets/image%20%2869%29.png)
+![](.gitbook/assets/image%20%2870%29.png)
 
 ## Session發號碼牌，取號碼牌
 
-![](.gitbook/assets/image%20%2868%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
-![](.gitbook/assets/image%20%2867%29.png)
+![](.gitbook/assets/image%20%2868%29.png)
 
 ## JDBC
 
@@ -185,7 +185,9 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2865%29.png)
 
-![](.gitbook/assets/image%20%2870%29.png)
+![](.gitbook/assets/image%20%2871%29.png)
 
-救急大絕招，設定SA
+### 大絕招，設定SA
+
+![](.gitbook/assets/image%20%2867%29.png)
 
