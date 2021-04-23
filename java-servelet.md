@@ -191,3 +191,43 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2867%29.png)
 
+### code
+
+```java
+public class S01_jdbc extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=mike;user=kirito;password=c8763";
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			Connection conn = DriverManager.getConnection(connectionUrl);
+
+			Statement state = conn.createStatement();
+			ResultSet rs = state.executeQuery("Select * from House");
+
+			while (rs.next()) {
+				System.out.println(rs.getString(1) + "," + rs.getString(2));
+
+			}
+			rs.close();
+			state.close();
+			conn.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doGet(request, response);
+	}
+
+}
+```
+
