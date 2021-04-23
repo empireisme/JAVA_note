@@ -165,3 +165,5 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2855%29.png)
 
+![](.gitbook/assets/image%20%2864%29.png)
+
