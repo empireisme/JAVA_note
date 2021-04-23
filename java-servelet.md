@@ -40,6 +40,8 @@ public class MyServlet02 extends HttpServlet {
 
 ## 利用XML更改初始參數，讓廠商可以不用動到程式碼修改
 
+![](.gitbook/assets/image%20%2864%29.png)
+
 ![](.gitbook/assets/image%20%2829%29.png)
 
 ![](.gitbook/assets/image%20%2833%29.png)
@@ -165,5 +167,15 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2855%29.png)
 
-![](.gitbook/assets/image%20%2864%29.png)
+![](.gitbook/assets/image%20%2865%29.png)
+
+## Cookie
+
+![](.gitbook/assets/image%20%2868%29.png)
+
+## Session發號碼牌，取號碼牌
+
+![](.gitbook/assets/image%20%2867%29.png)
+
+![](.gitbook/assets/image%20%2866%29.png)
 
