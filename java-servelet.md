@@ -167,29 +167,29 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2855%29.png)
 
-![](.gitbook/assets/image%20%2867%29.png)
+![](.gitbook/assets/image%20%2870%29.png)
 
 ## Cookie
 
-![](.gitbook/assets/image%20%2872%29.png)
+![](.gitbook/assets/image%20%2877%29.png)
 
 ## Session發號碼牌，取號碼牌
 
-![](.gitbook/assets/image%20%2871%29.png)
+![](.gitbook/assets/image%20%2876%29.png)
 
-![](.gitbook/assets/image%20%2870%29.png)
+![](.gitbook/assets/image%20%2874%29.png)
 
-## JDBC
+## CH10 JDBC
 
 ### SQL
 
 ![](.gitbook/assets/image%20%2865%29.png)
 
-![](.gitbook/assets/image%20%2873%29.png)
+![](.gitbook/assets/image%20%2878%29.png)
 
 ### 大絕招，設定SA
 
-![](.gitbook/assets/image%20%2869%29.png)
+![](.gitbook/assets/image%20%2872%29.png)
 
 ### code
 
@@ -233,9 +233,23 @@ public class S01_jdbc extends HttpServlet {
 
 ### JNDI，需要設定兩個XML，一個在tomcat，一個在webXML
 
-![](.gitbook/assets/image%20%2874%29.png)
+注意還是需要JDBC的檔案
+
+![](.gitbook/assets/image%20%2879%29.png)
+
+![](.gitbook/assets/image%20%2869%29.png)
+
+![](.gitbook/assets/image%20%2871%29.png)
+
+## DAO
+
+![](.gitbook/assets/image%20%2875%29.png)
 
 ![](.gitbook/assets/image%20%2866%29.png)
 
 ![](.gitbook/assets/image%20%2868%29.png)
+
+![](.gitbook/assets/image%20%2873%29.png)
+
+![](.gitbook/assets/image%20%2867%29.png)
 
