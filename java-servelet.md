@@ -167,15 +167,25 @@ public class S03_testinit2 extends HttpServlet {
 
 ![](.gitbook/assets/image%20%2855%29.png)
 
-![](.gitbook/assets/image%20%2865%29.png)
+![](.gitbook/assets/image%20%2866%29.png)
 
 ## Cookie
 
-![](.gitbook/assets/image%20%2868%29.png)
+![](.gitbook/assets/image%20%2869%29.png)
 
 ## Session發號碼牌，取號碼牌
 
+![](.gitbook/assets/image%20%2868%29.png)
+
 ![](.gitbook/assets/image%20%2867%29.png)
 
-![](.gitbook/assets/image%20%2866%29.png)
+## JDBC
+
+### SQL
+
+![](.gitbook/assets/image%20%2865%29.png)
+
+![](.gitbook/assets/image%20%2870%29.png)
+
+救急大絕招，設定SA
 
