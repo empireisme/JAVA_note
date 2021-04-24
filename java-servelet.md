@@ -2,6 +2,14 @@
 
 ## 安裝
 
+下載tomcat，並且解壓縮
+
+下載MSSQL jar 加入lib
+
+設定MSSQL登入驗證使用SQL驗證並且更改他的權限
+
+## 安裝
+
 {% embed url="https://pclevinblog.pixnet.net/blog/post/314562670-%5Bapache\_tomcat%5D-eclipse-裡tomcat-安裝教學" %}
 
 ## Eclipise設定
@@ -200,6 +208,10 @@ public class S03_testinit2 extends HttpServlet {
 ### 大絕招，設定SA
 
 ![](.gitbook/assets/image%20%2873%29.png)
+
+![](.gitbook/assets/image%20%2882%29.png)
+
+### 
 
 ### code
 
