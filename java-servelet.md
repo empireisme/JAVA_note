@@ -1,5 +1,15 @@
 # JAVA servelet
 
+## 安裝
+
+{% embed url="https://pclevinblog.pixnet.net/blog/post/314562670-%5Bapache\_tomcat%5D-eclipse-裡tomcat-安裝教學" %}
+
+## Eclipise設定
+
+![](.gitbook/assets/image%20%2881%29.png)
+
+## 
+
 ## 利用form取得資訊
 
 ![](.gitbook/assets/image%20%2852%29.png)
