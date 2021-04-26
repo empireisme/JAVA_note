@@ -124,5 +124,39 @@ public class User implements Serializable {
 
 ![](.gitbook/assets/image%20%2898%29.png)
 
+![](.gitbook/assets/image%20%28100%29.png)
+
+![](.gitbook/assets/image%20%2899%29.png)
+
+```javascript
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${userDetail.userName}</title>
+</head>
+<body>
+
+<table border="1">
+<tr>
+<th>使用者ID</th>
+<th>使用者名稱</th>
+<th>使用者密碼</th>
+</tr>
+
+<tr>
+<td>${userDetail.userId}</td>
+<td>${userDetail.userName}</td>
+<td>${userDetail.password}</td>
+</tr>
+
+</table>
+
+</body>
+</html>
+```
+
 
 
