@@ -183,8 +183,11 @@ public class User implements Serializable {
 3. GetOneUserService\(Model\)
 4. UsersDao\(Model\)
 5. UserDetail.jsp\(View\)經過渲染的
+6. Users\(Model\)bean配合MSSQL
 
 ### 設定MSSQL
+
+
 
 
 
