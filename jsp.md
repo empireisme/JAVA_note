@@ -174,3 +174,17 @@ public class User implements Serializable {
 
 ![](.gitbook/assets/image%20%28105%29.png)
 
+## 完整範例架構
+
+### JAVA端
+
+1. select.jsp\(前端查詢表單\)
+2. GetOneUserServlet\(Controller\)
+3. GetOneUserService\(Model\)
+4. UsersDao\(Model\)
+5. UserDetail.jsp\(View\)經過渲染的
+
+### 設定MSSQL
+
+
+
