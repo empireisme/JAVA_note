@@ -161,5 +161,235 @@
 </html>
 ```
 
+## 可以單筆輸入到database的範例
+
+### Javabean
+
+```java
+package model.bean;
+
+import java.io.Serializable;
+
+public class Dish implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	private int Store_id;
+	private String Dish;
+	private int Price;
+	private String Remarks;
+
+	public Dish( ) {
+		
+	}
+	public Dish(int store_id, String dish, int price, String remarks) {
+		Store_id = store_id;
+		Dish = dish;
+		Price = price;
+		Remarks = remarks;
+
+	}
+
+	public int getStore_id() {
+		return Store_id;
+	}
+
+	public void setStore_id(int store_id) {
+		Store_id = store_id;
+	}
+
+	public String getDish() {
+		return Dish;
+	}
+
+	public void setDish(String dish) {
+		Dish = dish;
+	}
+
+	public int getPrice() {
+		return Price;
+	}
+
+	public void setPrice(int price) {
+		Price = price;
+	}
+
+	public String getRemarks() {
+		return Remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		Remarks = remarks;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+}
+
+```
+
+### javadao
+
+```java
+package model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import model.bean.Dish;
+
+
+public class DishDao {
+	
+	Connection conn;
+
+	public DishDao(Connection conn) {
+		this.conn = conn;
+	}
+	
+	public int AddDish(Dish dishbean) throws Exception{
+	
+		PreparedStatement preState = conn.prepareStatement("INSERT INTO [dbo].[menu]\r\n"
+				+ "           ([Store_id]\r\n"
+				+ "           ,[Dish]\r\n"
+				+ "           ,[Price]\r\n"
+				+ "           ,[Remarks])\r\n"
+				+ "     VALUES(?,?,?,?)");
+	
+		preState.setInt(1,dishbean.getStore_id());
+		preState.setString(2,dishbean.getDish());
+		preState.setInt(3,dishbean.getPrice());
+		preState.setString(4,dishbean.getRemarks());
+	
+		int b = preState.executeUpdate();
+		
+		preState.close();
+	
+		return b;
+	}
+	
+}
+	
+
+
+```
+
+### javaservice
+
+塞入連線以及塞入dao方法
+
+```java
+package model.service;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import model.bean.Dish;
+import model.dao.DishDao;
+
+
+public class AddMenuService {
+	
+	private Connection conn;
+	
+	public int doService(Dish dishbean) {
+		int d =-123;
+		try {
+			getConn();
+			DishDao dDao = new DishDao(conn);
+			
+			d = dDao.AddDish(dishbean);
+			
+			closeConn();
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		return d;
+		
+	}
+	
+	
+	
+	private void getConn() {
+		String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=NeverStarve;user=kirito;password=c8763";
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			conn = DriverManager.getConnection(connectionUrl);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void closeConn() throws Exception {
+		conn.close();
+	}
+	
+}
+
+```
+
+
+
+### javaservlet
+
+作為controller
+
+```java
+package controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
+import model.bean.Dish;
+import model.service.AddMenuService;
+
+@WebServlet("/AddDishServlet")
+public class AddDishServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		ArrayList<Dish> diaL = new ArrayList<Dish>();
+		for (int i = 0; i <= x; i++) {
+			if (!(request.getParameter("storeUid" + i) == null)) {
+				
+				Integer Store_id = Integer.valueOf(request.getParameter("storeUid" + String.valueOf(i)));
+				String Dish = request.getParameter("dishName");
+				Integer Price = Integer.valueOf(request.getParameter("dishPrice"));
+				String Remarks = request.getParameter("dishRemarks");
+				Dish d = new Dish(Store_id, Dish, Price, Remarks);
+				diaL.add(d);
+				
+			}
+		}
+		int u = new AddMenuService().doService(d);
+
+		System.out.println(u);
+//		request.setAttribute("DishDetail", u);
+//		request.getRequestDispatcher("TheUserDetail.jsp").forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}
+
+```
+
 
 
