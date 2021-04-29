@@ -10,6 +10,8 @@
 
 {% embed url="https://yubin551.gitbook.io/java-note/basic-object-oriented" %}
 
+{% embed url="https://github.com/bridennis/java-crud-spa/tree/master/src/main/java/ru/javarush/internship/test" %}
+
 
 
 
