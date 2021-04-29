@@ -4,6 +4,12 @@
 
 {% embed url="https://stackoverflow.com/questions/5003142/show-jdbc-resultset-in-html-in-jsp-page-using-mvc-and-dao-pattern" %}
 
+{% embed url="https://stackoverflow.com/questions/30849694/java-servlet-get-parameters-with-same-name" %}
+
+{% embed url="https://stackoverflow.com/questions/5096454/easy-way-of-populating-javabeans-based-on-request-parameters" %}
+
+{% embed url="https://gist.github.com/TakeOver5/cd5aa78cfec7b35122c70c6044f81976" %}
+
 
 
 菜單提交的bug
