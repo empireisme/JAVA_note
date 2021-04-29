@@ -12,7 +12,9 @@
 
 {% embed url="https://stackoverflow.com/questions/32551415/how-to-insert-arraylist-data-to-the-database" %}
 
+## FILE
 
+{% file src=".gitbook/assets/iii\_mid\_store0429multipledata.war" %}
 
 菜單提交的bug
 
