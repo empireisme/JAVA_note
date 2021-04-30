@@ -16,6 +16,8 @@
 
 {% embed url="https://matthung0807.blogspot.com/2020/09/servlet-simple-restful-api.html" %}
 
+{% embed url="https://www.tutorialspoint.com/servlets/servlets-form-data.htm" %}
+
 
 
 
