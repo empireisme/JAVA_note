@@ -18,6 +18,12 @@
 
 {% embed url="https://www.tutorialspoint.com/servlets/servlets-form-data.htm" %}
 
+{% embed url="https://stackoverflow.com/questions/4112686/how-to-use-servlets-and-ajax" %}
+
+{% embed url="https://www.geeksforgeeks.org/how-to-fetch-data-from-json-file-and-display-in-html-table-using-jquery/" %}
+
+{% embed url="https://www.youtube.com/watch?v=konz-5tM\_7Q" %}
+
 
 
 
