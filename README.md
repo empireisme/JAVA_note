@@ -26,6 +26,10 @@
 
 
 
+{% embed url="https://jsonplaceholder.typicode.com/posts" %}
+
+{% embed url="https://howtocreateapps.com/fetch-and-display-json-html-javascript/" %}
+
 
 
 
