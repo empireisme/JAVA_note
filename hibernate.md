@@ -89,3 +89,12 @@
 
 ![](.gitbook/assets/image%20%28109%29.png)
 
+```sql
+CREATE TABLE Department(
+deptid int primary key not null identity(1,1),
+deptname nvarchar(50)
+);
+```
+
+
+
