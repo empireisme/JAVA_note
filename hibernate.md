@@ -140,3 +140,100 @@ public class HbernateUtil {
 
 ![](.gitbook/assets/image%20%28113%29.png)
 
+## 完整範例不含設定maven
+
+### 第一步設定連線的JAVAUTIL
+
+```java
+package tw.hibernatedemo.util;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+public class HbernateUtil {
+	
+	private static final SessionFactory factory=createFactory();
+	
+	
+	private static SessionFactory createFactory() {
+		StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml")
+				.build();
+		SessionFactory factory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
+
+		return factory;
+	}
+	
+	public static SessionFactory getSessionFactory() {
+		return factory; //find 痊癒變數的factory
+	}
+	
+	public static void closeSessionFactory() {
+		if(factory!=null) {
+			factory.close();
+		}
+	}
+	
+	
+}
+
+```
+
+第二步設定bean
+
+```java
+package tw.hibernatedemo.model;
+
+public class CompanyBean {
+	private int companyId;
+	private String companyName;
+	
+	public CompanyBean() {
+		
+	}
+
+	public CompanyBean(int companyId, String companyName) {
+		this.companyId = companyId;
+		this.companyName = companyName;
+	}
+
+	public int getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(int companyId) {
+		this.companyId = companyId;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+}
+
+```
+
+設定mapping的xml
+
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+    <class name="tw.hibernatedemo.model.CompanyBean" table="company">
+        <id name="companyId" type="java.lang.Integer">
+            <column name="companyID" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyName" type="java.lang.String">
+            <column name="companyNAME" sql-type="nvarchar(50)" />
+        </property>
+    </class>
+</hibernate-mapping>
+```
+
