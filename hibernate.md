@@ -349,3 +349,54 @@ public class CompanyService {
 
 ```
 
+### ACtion
+
+```java
+package tw.hibernatedemo.action;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import tw.hibernatedemo.model.CompanyBean;
+import tw.hibernatedemo.model.CompanyDAO;
+import tw.hibernatedemo.util.HbernateUtil;
+
+public class DemoCompanyBeanDAOAction1 {
+
+	public static void main(String[] args) {
+		SessionFactory factory = HbernateUtil.getSessionFactory();
+		Session session = factory.getCurrentSession();
+
+		try {
+			session.beginTransaction();
+			CompanyDAO comDAO = new CompanyDAO(session);
+			comDAO.insert(new CompanyBean(1009, "snowflake"));
+
+			// print all
+
+			// 印出全部
+			System.out.println("List All");
+
+			List<CompanyBean> listBean = comDAO.selectAll();
+
+			for (CompanyBean one : listBean) {
+				System.out.println("Company ID : " + one.getCompanyId() + " CompanyName: " + one.getCompanyName());
+			}
+
+			session.getTransaction().commit();
+
+		} catch (Exception e) {
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		} finally {
+
+		}
+
+	}
+
+}
+
+```
+
