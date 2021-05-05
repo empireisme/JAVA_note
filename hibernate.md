@@ -180,7 +180,7 @@ public class HbernateUtil {
 
 ```
 
-第二步設定bean
+### 第二步設定bean
 
 ```java
 package tw.hibernatedemo.model;
@@ -218,7 +218,7 @@ public class CompanyBean {
 
 ```
 
-設定mapping的xml
+#### 設定mapping的xml
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
@@ -235,5 +235,117 @@ public class CompanyBean {
         </property>
     </class>
 </hibernate-mapping>
+```
+
+### DAo
+
+```java
+package tw.hibernatedemo.model;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+public class CompanyDAO {
+	
+	private Session session;
+
+	public CompanyDAO(Session session) {
+		
+		this.session = session;
+		
+	}
+	
+	public CompanyBean insert(CompanyBean comBean) {
+		CompanyBean tempBean=session.get(CompanyBean.class, comBean.getCompanyId());
+		
+		if(tempBean==null) {
+			session.save(comBean);
+			return comBean;
+		}
+		return null;
+	}
+	
+	public CompanyBean getOneById(int id) {
+		CompanyBean tempBean=session.get(CompanyBean.class, id);
+		return tempBean;
+	}
+	
+	public List<CompanyBean> selectAll(){
+		//HQL: Hibernate Query Language
+		Query<CompanyBean>	query=session.createQuery("from CompanyBean",CompanyBean.class);
+		return query.list();
+	}
+	
+	public CompanyBean updateOne(int id,String newName) {
+		CompanyBean	tempBean=session.get(CompanyBean.class, id);
+		if(tempBean!=null) {
+			tempBean.setCompanyName(newName);
+		}
+		
+		return tempBean;
+	}
+	
+	public boolean deleteOne(int id) {
+		CompanyBean	tempBean=session.get(CompanyBean.class, id);
+		
+		if(tempBean!=null) {
+			session.delete(tempBean);
+			return true;
+		}
+		return false;
+	}
+
+	
+}
+
+```
+
+### service
+
+```java
+package tw.hibernatedemo.service;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+import tw.hibernatedemo.model.CompanyBean;
+import tw.hibernatedemo.model.CompanyDAO;
+
+public class CompanyService {
+	private CompanyDAO comDAO;
+	
+	public CompanyService(Session session) {
+		comDAO=new CompanyDAO(session);
+	}
+	
+	public CompanyBean select(int comId) {
+		CompanyBean comBean = comDAO.getOneById(comId);
+		return comBean;
+	}
+	
+	public List<CompanyBean> selectAll(){
+		 return comDAO.selectAll();
+	}
+	
+	public CompanyBean insert(CompanyBean comBean) {
+		CompanyBean tempBean = comDAO.insert(comBean);
+		return tempBean;
+	}
+	
+	public CompanyBean updateOne(int id, String newName) {
+		return comDAO.updateOne(id, newName);
+	}
+	
+	public boolean deleteOne(int id) {
+		boolean boo = comDAO.deleteOne(id);
+		return boo;
+	}
+	
+	
+}
+
 ```
 
