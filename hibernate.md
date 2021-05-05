@@ -406,5 +406,22 @@ mary澳交
 
 ![](.gitbook/assets/image%20%28114%29.png)
 
+關鍵在有設定foreign key
 
+```java
+create table bookUsers(
+id int primary key identity(1,1) not null,
+username nvarchar(50),
+)
+create table books(
+id int primary key identity(1,1) not null,
+booktitle nvarchar(50),
+publicYear nvarchar(50),
+fk_user_id int references bookUsers(id)
+)
+
+select * from books;
+go
+select * from bookUsers
+```
 
