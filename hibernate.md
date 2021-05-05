@@ -425,3 +425,153 @@ go
 select * from bookUsers
 ```
 
+### HQL
+
+```java
+package tw.hibernatedemo.action;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+import tw.hibernatedemo.model.Employee;
+import tw.hibernatedemo.util.HbernateUtil;
+
+public class DemoHQLAction1 {
+
+	public static void main(String[] args) {
+		DemoHQLAction1 hqlAction1 = new DemoHQLAction1();
+		hqlAction1.hqlUpdateData();
+	}
+	
+	public void selectAllHQL(){
+		SessionFactory factory = HbernateUtil.getSessionFactory();
+		Session session = factory.getCurrentSession();
+		
+		try {
+			session.beginTransaction();
+			
+			String hql = "from Employee"; // select * from Employee
+			
+			Query<Employee> query = session.createQuery(hql);
+			
+			List<Employee> list = query.getResultList();
+			
+			for(Employee oneBean:list) {
+				System.out.println(oneBean);
+			}
+			
+			
+			session.getTransaction().commit();
+			
+		}catch(Exception e) {
+			System.out.println("Something Wrong and ROLL BACK!!!");
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		}finally {
+			HbernateUtil.closeSessionFactory();
+		}
+	}
+	
+	
+	public void hqlSelectSalary(){
+		SessionFactory factory = HbernateUtil.getSessionFactory();
+		Session session = factory.getCurrentSession();
+		
+		// 找出薪水 > 30000 而且，假日有10天以上的人
+		try {
+			session.beginTransaction();
+			
+			String hql = "from Employee e where e.salary > 30000 and e.vacation > 10";
+			
+			Query<Employee> query = session.createQuery(hql);
+			
+			List<Employee> list = query.getResultList();
+			
+			System.out.println("薪水 > 30000 而且，假日有10天以上的人");
+			
+			for(Employee oneBean:list) {
+				System.out.println(oneBean);
+			}
+			
+			
+			session.getTransaction().commit();
+			
+		}catch(Exception e) {
+			System.out.println("Something Wrong and ROLL BACK!!!");
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		}finally {
+			HbernateUtil.closeSessionFactory();
+		}
+	}
+	public void hqlSelectSalarywithparameter(){
+		SessionFactory factory = HbernateUtil.getSessionFactory();
+		Session session = factory.getCurrentSession();
+		
+		// 找出薪水 > 30000 而且，假日有10天以上的人
+		try {
+			session.beginTransaction();
+			
+			String hql = "from Employee e where e.salary > :money and e.vacation > :day";
+			
+			Query<Employee> query = session.createQuery(hql)
+					.setParameter("money", 30000)
+					.setParameter("day", 10);
+			
+			List<Employee> list = query.getResultList();
+			
+			System.out.println("薪水 > 30000 而且，假日有10天以上的人");
+			
+			for(Employee oneBean:list) {
+				System.out.println(oneBean);
+			}
+			
+			
+			session.getTransaction().commit();
+			
+		}catch(Exception e) {
+			System.out.println("Something Wrong and ROLL BACK!!!");
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		}finally {
+			HbernateUtil.closeSessionFactory();
+		}
+	}
+	
+	public void hqlUpdateData(){
+		SessionFactory factory = HbernateUtil.getSessionFactory();
+		Session session = factory.getCurrentSession();
+		
+		// 找出薪水 > 30000 而且，假日有10天以上的人
+		try {
+			session.beginTransaction();
+			
+			String hql = "Update Employee e set salary= :money where id=:id";
+			
+			int result = session.createQuery(hql)
+					.setParameter("money", 60000)
+					.setParameter("id", 3)
+					.executeUpdate();
+		
+			System.out.println(result);
+			
+			session.getTransaction().commit();
+			
+		}catch(Exception e) {
+			System.out.println("Something Wrong and ROLL BACK!!!");
+			session.getTransaction().rollback();
+			e.printStackTrace();
+		}finally {
+			HbernateUtil.closeSessionFactory();
+		}
+	}
+	
+	
+	
+	
+}
+```
+
