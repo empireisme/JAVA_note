@@ -10,6 +10,70 @@
 
 {% embed url="https://stackoverflow.com/questions/32551415/how-to-insert-arraylist-data-to-the-database" %}
 
+## 超強表單
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>12formObject.html</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#idbutton").addEventListener("click",checkf);//事件繫結
+            document.querySelector("#idreset").addEventListener("click",resetf);
+            document.querySelector("#idsubmit").addEventListener("click",submitf);
+        });
+
+        function checkf() {
+            let hobbys=document.getElementsByName("hobby");
+            let hobbysLen=hobbys.length;
+            console.log(hobbysLen);
+
+            for(let hobby of hobbys){
+                console.log(hobby.checked);
+                console.log(hobby.value);
+
+                if(hobby.checked)
+                    console.log(hobby.value);
+            }
+        }
+
+        function resetf() {
+            document.forms[0].reset();
+        }
+
+        function submitf() { //功能就在驗證，可以設立旗標
+            // if(document.getElementById("idname").value=="")
+            //    alert("please type something")
+            // else{
+            //     document.forms[0].submit()
+            // }
+            let theName=document.getElementsByName("txtName")[0].value;
+            if(theName=="")
+                document.querySelector("#idsp").innerHTML="you must enter"
+            else
+                document.forms[0].submit()
+        }
+    </script>
+</head>
+<body>
+    <form action="http://192.168.138.200:8080/get.jsp" method="get">
+			<label>name:</label><input type="text" id="idname" name="txtName" value="abc" /><span id="idsp"></span><br/>
+			<input type="checkbox" name="hobby" checked="checked" value="reading"/>reading
+			<input type="checkbox" name="hobby" value="game"/>game
+			<input type="checkbox" name="hobby" value="sleep"/>sleep
+			<br/>
+            <input type="submit" value="送出" />	
+            <input id="idbutton" type="button" value="check" />
+            <input id="idreset" type="button" value="reset" />
+			<input id="idsubmit" type="button" value="submit" />
+	</form>
+</body>
+</html>
+
+```
+
 ## FILE
 
 {% file src=".gitbook/assets/iii\_mid\_store0429multipledata.war" %}
