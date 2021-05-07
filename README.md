@@ -52,7 +52,7 @@ EXPRESS Middleware
 
 {% embed url="https://stackoverflow.com/questions/66448572/how-to-display-all-json-fetch-api-content-on-a-html-table-using-javascript" %}
 
-```text
+```markup
 <!DOCTYPE html>
 <html lang="en">
 <head>
