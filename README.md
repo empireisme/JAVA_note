@@ -44,6 +44,10 @@ EXPRESS Middleware
 
 {% embed url="https://medium.com/front-end-weekly/build-a-collaborative-rich-text-editor-with-node-js-and-socket-io-38ee25b6e315" %}
 
+## getjsondata
+
+{% embed url="https://zetcode.com/javascript/jsonurl/" %}
+
 
 
 
