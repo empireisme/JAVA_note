@@ -52,7 +52,86 @@ EXPRESS Middleware
 
 {% embed url="https://stackoverflow.com/questions/66448572/how-to-display-all-json-fetch-api-content-on-a-html-table-using-javascript" %}
 
+```text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <table id="mytable">
+            <thead>
+                <tr>
+                    <th colspan="2">The table header</th>
+                    <th colspan="2">The table header</th>
+                    <th colspan="2">The table header</th>
+                    <th colspan="2">The table header</th>
+                </tr> 
+            </thead>
+            <tbody>
 
+            </tbody>
+        </table>
+
+</body>
+</html>
+
+<script>
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => response.json())
+  .then((json) => json.forEach(tableElements)
+  )
+
+  function tableElements (element, index, arr){
+    arr[index] = document.querySelector('#mytable').innerHTML +=
+    `<tr>
+        <td>${element.userId}</td>
+        <td>${element.id}</td>
+        <td>${element.title}</td>
+        <td>${element.body}</td>
+    </tr>`
+  }
+</script>
+
+
+<!-- <script>
+fetch("http://dummy.restapiexample.com/api/v1/employees").then(
+  res => {
+    res.json().then(
+      data => {
+        console.log(data.data);
+        if (data.data.length > 0) {
+
+          var temp = "";
+          data.data.forEach((itemData) => {
+            temp += "<tr>";
+            temp += "<td>" + itemData.id + "</td>";
+            temp += "<td>" + itemData.employee_name + "</td>";
+            temp += "<td>" + itemData.employee_salary + "</td></tr>";
+          });
+          document.getElementById('data').innerHTML = temp;
+        }
+      }
+    )
+  }
+)
+
+
+</script> -->
+
+
+<!-- <script>
+    fetch('http://time.jsontest.com')
+        .then(res => res.json())
+        .then((out) => {
+            console.log('Output: ', out);
+    }).catch(err => console.error(err));
+</script> -->
+```
 
 
 
