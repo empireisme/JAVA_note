@@ -44,9 +44,13 @@ EXPRESS Middleware
 
 {% embed url="https://medium.com/front-end-weekly/build-a-collaborative-rich-text-editor-with-node-js-and-socket-io-38ee25b6e315" %}
 
-## getjsondata
+## Getjsondata
 
 {% embed url="https://zetcode.com/javascript/jsonurl/" %}
+
+{% embed url="https://stackoverflow.com/questions/66448572/how-to-display-all-json-fetch-api-content-on-a-html-table-using-javascript" %}
+
+{% embed url="https://stackoverflow.com/questions/66448572/how-to-display-all-json-fetch-api-content-on-a-html-table-using-javascript" %}
 
 
 
