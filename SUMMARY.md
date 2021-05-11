@@ -74,4 +74,5 @@
 * [JSP](jsp.md)
 * [Hibernate](hibernate.md)
 * [Spring](spring.md)
+* [IoC控制反轉](ioc-kong-zhi-fan-zhuan.md)
 
