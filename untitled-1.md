@@ -12,5 +12,7 @@
 
 {% embed url="https://medium.com/chikuwa-tech-study/tagged/spring-boot" %}
 
+{% embed url="https://ithelp.ithome.com.tw/articles/10194425" %}
+
 
 
