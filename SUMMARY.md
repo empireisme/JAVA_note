@@ -76,5 +76,5 @@
 * [Hibernate](hibernate.md)
 * [Spring](spring.md)
 * [IoC控制反轉](ioc-kong-zhi-fan-zhuan.md)
-* [Untitled](untitled-1.md)
+* [專題會用到的技術](untitled-1.md)
 

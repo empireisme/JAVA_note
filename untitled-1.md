@@ -1,8 +1,10 @@
-# Untitled
+# 專題會用到的技術
 
 ![](.gitbook/assets/image%20%28125%29.png)
 
 ![](.gitbook/assets/image%20%28124%29.png)
+
+## 專題技術連結
 
 {% embed url="https://ithelp.ithome.com.tw/articles/10247242" %}
 
