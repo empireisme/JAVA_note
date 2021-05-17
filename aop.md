@@ -24,7 +24,11 @@ AOP解決了以下的事情
 
 ![](.gitbook/assets/image%20%28132%29.png)
 
+![](.gitbook/assets/image%20%28134%29.png)
+
 ## pom.xml
+
+![](.gitbook/assets/image%20%28137%29.png)
 
 ```markup
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -139,4 +143,8 @@ AOP解決了以下的事情
 
 </project>
 ```
+
+![](.gitbook/assets/image%20%28135%29.png)
+
+![](.gitbook/assets/image%20%28136%29.png)
 
