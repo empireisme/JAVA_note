@@ -26,7 +26,7 @@ AOP解決了以下的事情
 
 ## pom.xml
 
-```text
+```markup
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -36,8 +36,8 @@ AOP解決了以下的事情
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 		<hibernate.version>5.4.30.Final</hibernate.version>
 		<spring.version>5.3.6</spring.version>
 	</properties>
@@ -108,7 +108,7 @@ AOP解決了以下的事情
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
-			<version>7.2.2.jre11</version>
+			<version>8.4.1.jre11</version>
 		</dependency>
 
 		<dependency>
