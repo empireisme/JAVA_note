@@ -152,9 +152,11 @@ AOP解決了以下的事情
 
 ![](.gitbook/assets/image%20%28138%29.png)
 
-![](.gitbook/assets/image%20%28142%29.png)
+![](.gitbook/assets/image%20%28143%29.png)
 
 ## 陣列處理技巧搭配請求路徑
+
+![](.gitbook/assets/image%20%28142%29.png)
 
 ![](.gitbook/assets/image%20%28141%29.png)
 
