@@ -170,3 +170,9 @@ AOP解決了以下的事情
 注意：items 用於接收集合物件，var 定義物件接收從集合裡遍歷出的每一個元素。同時其會自動轉型。
 {% endhint %}
 
+## PATHVARIABLE
+
+![](.gitbook/assets/image%20%28146%29.png)
+
+![](.gitbook/assets/image%20%28145%29.png)
+
