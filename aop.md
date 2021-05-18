@@ -164,3 +164,9 @@ AOP解決了以下的事情
 
 ![](.gitbook/assets/image%20%28144%29.png)
 
+## C標籤for each
+
+{% hint style="info" %}
+注意：items 用於接收集合物件，var 定義物件接收從集合裡遍歷出的每一個元素。同時其會自動轉型。
+{% endhint %}
+
