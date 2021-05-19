@@ -16,5 +16,9 @@
 
 {% embed url="https://ithelp.ithome.com.tw/articles/10194425" %}
 
+## JSP表格
+
+{% embed url="https://stackoverflow.com/questions/43398579/how-to-display-string-of-json-in-jsp-table" %}
+
 
 
