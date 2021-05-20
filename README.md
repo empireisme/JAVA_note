@@ -141,3 +141,7 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
  MultipartFile productImage = bb.getProductImage();        String originalFilename = productImage.getOriginalFilename();        bb.setFileName(originalFilename);                String ext = originalFilename.substring(originalFilename.lastIndexOf("."));        String rootDirectory = context.getRealPath("/");        //  建立Blob物件，交由 Hibernate 寫入資料庫        if (productImage != null && !productImage.isEmpty() ) {            try {                byte[] b = productImage.getBytes();                Blob blob = new SerialBlob(b);                bb.setCoverImage(blob);            } catch(Exception e) {                e.printStackTrace();                throw new RuntimeException("檔案上傳發生異常: " + e.getMessage());            }        }
 ```
 
+```markup
+ try {            File imageFolder = new File(rootDirectory, "images");            if (!imageFolder.exists()) imageFolder.mkdirs();            File file = new File(imageFolder, bb.getBookId() + ext);            productImage.transferTo(file);        } catch(Exception e) {            e.printStackTrace();            throw new RuntimeException("檔案上傳發生異常: " + e.getMessage());        }
+```
+
