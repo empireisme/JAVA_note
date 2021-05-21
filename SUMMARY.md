@@ -80,4 +80,5 @@
 * [專題會用到的技術](untitled-1.md)
 * [AOPandMVChelloworld](aop.md)
 * [表單綁定](biao-chan-bang-ding.md)
+* [AJAX](ajax.md)
 
