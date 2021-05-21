@@ -145,3 +145,9 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
  try {            File imageFolder = new File(rootDirectory, "images");            if (!imageFolder.exists()) imageFolder.mkdirs();            File file = new File(imageFolder, bb.getBookId() + ext);            productImage.transferTo(file);        } catch(Exception e) {            e.printStackTrace();            throw new RuntimeException("檔案上傳發生異常: " + e.getMessage());        }
 ```
 
+## ajax
+
+{% embed url="https://www.youtube.com/watch?v=12tjh\_6xL2M" %}
+
+
+
