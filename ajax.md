@@ -62,5 +62,5 @@ static { }
 static { if \(DB\_TYPE.equals\(DB\_TYPE\_MYSQL\)\) { JNDI\_DB\_NAME = JNDI\_DB\_NAME\_MY; DB\_URL = DB\_URL\_MYSQL; USERID = USERID\_MYSQL; PASSWORD = PASSWORD\_MYSQL; } else if \(DB\_TYPE.equals\(DB\_TYPE\_SQLSERVER\)\) { JNDI\_DB\_NAME = JNDI\_DB\_NAME\_MS; DB\_URL = DB\_URL\_SQLSERVER; USERID = USERID\_SQLSERVER; PASSWORD = PASSWORD\_SQLSERVER; } System.out.println\("GlobalService, JNDI\_DB\_NAME=" + JNDI\_DB\_NAME\); System.out.println\("GlobalService, DB\_URL=" + DB\_URL\); System.out.println\("GlobalService, USERID=" + USERID\); System.out.println\("GlobalService, PASSWORD=" + PASSWORD\); }
 {% endhint %}
 
-
+![](.gitbook/assets/image%20%28178%29.png)
 
