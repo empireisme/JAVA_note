@@ -64,5 +64,7 @@ static { if \(DB\_TYPE.equals\(DB\_TYPE\_MYSQL\)\) { JNDI\_DB\_NAME = JNDI\_DB\_
 
 ![](.gitbook/assets/image%20%28178%29.png)
 
-![](.gitbook/assets/image%20%28180%29.png)
+![](.gitbook/assets/image%20%28181%29.png)
+
+![](.gitbook/assets/image%20%28179%29.png)
 
