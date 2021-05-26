@@ -42,7 +42,13 @@
 
 ![](.gitbook/assets/image%20%28172%29.png)
 
+![](.gitbook/assets/image%20%28175%29.png)
+
+![](.gitbook/assets/image%20%28177%29.png)
+
+## 靜態起始
+
 ![](.gitbook/assets/image%20%28174%29.png)
 
-![](.gitbook/assets/image%20%28175%29.png)
+![](.gitbook/assets/image%20%28176%29.png)
 
