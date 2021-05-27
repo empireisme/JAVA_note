@@ -4,5 +4,7 @@
 
 {% embed url="https://hackmd.io/@a110605/rkNKolQVz?type=view" %}
 
+{% embed url="https://matthung0807.blogspot.com/2021/04/java-find-if-string-contains-repeat.html" %}
+
 
 
