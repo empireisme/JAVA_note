@@ -151,5 +151,9 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
 
 {% embed url="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest/Using\_XMLHttpRequest\#%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%96%AE%E8%88%87%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88" %}
 
+## JAVA 分頁
+
+{% embed url="https://www.jianshu.com/p/d108d0cd9acf" %}
+
 
 
