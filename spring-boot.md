@@ -12,15 +12,27 @@
 
 ![](.gitbook/assets/image%20%28186%29.png)
 
-![](.gitbook/assets/image%20%28192%29.png)
+![](.gitbook/assets/image%20%28194%29.png)
 
-![](.gitbook/assets/image%20%28191%29.png)
+![](.gitbook/assets/image%20%28192%29.png)
 
 ## session
 
-![](.gitbook/assets/image%20%28189%29.png)
+### 放進去
 
 ![](.gitbook/assets/image%20%28190%29.png)
 
+![](.gitbook/assets/image%20%28191%29.png)
 
+### 拿出來
+
+![](.gitbook/assets/image%20%28195%29.png)
+
+![](.gitbook/assets/image%20%28196%29.png)
+
+
+
+![](.gitbook/assets/image%20%28189%29.png)
+
+![](.gitbook/assets/image%20%28193%29.png)
 
