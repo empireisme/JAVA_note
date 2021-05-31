@@ -10,6 +10,8 @@
 
 {% embed url="https://morosedog.gitlab.io/categories/Spring-Boot/" %}
 
+{% embed url="https://ithelp.ithome.com.tw/articles/10256275" %}
+
 
 
 {% embed url="https://yubin551.gitbook.io/java-note/basic-object-oriented" %}
