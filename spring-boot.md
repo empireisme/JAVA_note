@@ -36,5 +36,11 @@
 
 ![](.gitbook/assets/image%20%28193%29.png)
 
+自動放到本基儲存庫
+
 ![](.gitbook/assets/image%20%28197%29.png)
+
+![](.gitbook/assets/image%20%28199%29.png)
+
+![](.gitbook/assets/image%20%28198%29.png)
 
