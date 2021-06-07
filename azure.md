@@ -14,3 +14,9 @@
 
 ![](.gitbook/assets/image%20%28217%29.png)
 
+## 6/7 SQL injection
+
+![](.gitbook/assets/image%20%28223%29.png)
+
+![](.gitbook/assets/image%20%28222%29.png)
+
