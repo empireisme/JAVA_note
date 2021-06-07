@@ -20,5 +20,7 @@
 
 ![](.gitbook/assets/image%20%28222%29.png)
 
+## 相同頁首的引用方式
+
 ![](.gitbook/assets/image%20%28223%29.png)
 
