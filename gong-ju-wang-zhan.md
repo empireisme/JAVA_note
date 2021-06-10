@@ -4,6 +4,10 @@
 
 ## 安裝lombok
 
+{% embed url="https://kucw.github.io/blog/2020/3/java-lombok/" %}
+
+
+
 {% embed url="https://projectlombok.org/download" %}
 
 在所在資料夾輸入cmd 然後輸入java -jar lombok.jar
