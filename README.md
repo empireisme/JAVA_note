@@ -161,5 +161,9 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
 
 {% embed url="https://www.jianshu.com/p/d108d0cd9acf" %}
 
+## JPA
+
+{% embed url="https://morosedog.gitlab.io/springboot-20190328-springboot14/" %}
+
 
 
