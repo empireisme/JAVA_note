@@ -20,19 +20,5 @@ JQUERY如何傳送資料到後端
 
 JDBC的流程為何?\(prepared statement那些\)
 
-## fizzbuzz Rcode
-
-```text
-vec <- rnorm(9)
-index <- c(3,6,7)
-number <- c(23,10,3)
-
-  for(i in 1:length(index)){
-    vec[index[i]]=number[i]
-  }
-
-vec
-```
-
 
 
