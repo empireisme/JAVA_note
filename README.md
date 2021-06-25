@@ -169,3 +169,9 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
 
 
 
+## @Modelattribute
+
+{% embed url="https://blog.csdn.net/u014645508/article/details/88871482" %}
+
+
+
