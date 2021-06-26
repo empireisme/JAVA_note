@@ -177,5 +177,9 @@ fetch("http://dummy.restapiexample.com/api/v1/employees").then(
 
 {% embed url="https://blog.csdn.net/lihua5419/article/details/83418043" %}
 
+## 新增商品
+
+{% embed url="https://www.cnblogs.com/leona-d/p/5779804.html" %}
+
 
 
