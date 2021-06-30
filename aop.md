@@ -176,3 +176,7 @@ AOP解決了以下的事情
 
 ![](.gitbook/assets/image%20%28145%29.png)
 
+## 利用transactional註釋可以少寫這些程式碼
+
+![](.gitbook/assets/image%20%28243%29.png)
+
