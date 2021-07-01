@@ -25,3 +25,9 @@ asdfasdf=asdfasdf
 
 ![](.gitbook/assets/image%20%28240%29.png)
 
+## java權限管理
+
+{% embed url="https://article.itxueyuan.com/nMOyy" %}
+
+
+
