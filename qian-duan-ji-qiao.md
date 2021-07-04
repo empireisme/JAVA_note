@@ -12,3 +12,11 @@
 
 ![](.gitbook/assets/image%20%28242%29.png)
 
+## get data
+
+{% embed url="https://zetcode.com/javascript/jsonurl/" %}
+
+{% embed url="https://howtocreateapps.com/fetch-and-display-json-html-javascript/" %}
+
+
+
