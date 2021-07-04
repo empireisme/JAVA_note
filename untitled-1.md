@@ -279,7 +279,7 @@ function dateValidation(str) {
 
 ## 一進去就看到所有表單
 
-showAllmembers
+### showAllmembers
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -341,7 +341,7 @@ window.onload = function() {
 
 ```
 
-## 上一頁下一夜JSP
+## 上一頁下一頁 JSP
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
