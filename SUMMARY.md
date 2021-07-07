@@ -1,6 +1,7 @@
 # Table of contents
 
 * [資策會Java筆記](README.md)
+* [Mysql](mysql.md)
 * [基礎JS](ji-chu-js.md)
 * [前端技巧](qian-duan-ji-qiao.md)
 * [資料庫技巧](zi-liao-ku-ji-qiao.md)
